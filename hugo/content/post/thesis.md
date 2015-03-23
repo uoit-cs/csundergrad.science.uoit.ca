@@ -1,6 +1,6 @@
 +++
 date = "2015-03-20T10:00:31-04:00"
-title = "thesis"
+title = "Thesis Schedule"
 
 +++
 

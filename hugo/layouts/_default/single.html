@@ -11,11 +11,9 @@
 </div>
 
 <div class="container">
-    {{range .Data.Pages }}
     <h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
     <div class="page">{{.Content}}</div>
     <hr>
-    {{end}}
 </div>
 {{partial "js_includes.html" .}}
 </body>
