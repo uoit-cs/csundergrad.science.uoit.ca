@@ -1,22 +1,58 @@
 <html>
 <head>
+<title>{{.Site.Title}}</title>
 {{partial "head_includes.html" .}}
 </head>
 
 <body>
 
 <div class="container">
-    <h1> Computing@Science.UOIT </h1>
-    <hr>
+    <div class="title">
+        <h1> Computing Science / UOIT </h1>
+    </div>
 </div>
+<hr>
 
 <div class="container">
-    {{range .Data.Pages }}
-    <h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
-    <div class="page">{{.Content}}</div>
-    <hr>
-    {{end}}
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="welcome">
+                {{partial "welcome.html" .}}
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="pages">
+                {{range .Data.Pages }}
+                <a href="{{.RelPermalink}}">
+                    <h1>
+                        {{if .Params.icon}} 
+                        <i class="fa fa-{{.Params.icon}}"></i>
+                        {{end}}
+                        {{.Title}}
+                        {{if .Params.event}}
+                        <span class="label label-info">
+                            @ {{.Params.event}}
+                        </span>
+                        {{end}}
+
+                        <small>
+                            <span class="pubdate">
+                                {{ .Date.Format "2006-01-02" }}
+                            </span>
+                        </small>
+                    </h1>
+                </a>
+                <p class="description">{{.Summary}}</p>
+            {{end}}
+        </div>
+        </div>
+    </div>
 </div>
+
+<hr>
+
 {{partial "js_includes.html" .}}
 </body>
 </html>

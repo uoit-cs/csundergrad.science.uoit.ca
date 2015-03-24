@@ -4,9 +4,32 @@ body {
     font-size: 200%;
 }
 
+.title h1 {
+    font-weight: bold;
+}
+
+.welcome {
+    padding-top: 10px;
+}
+
+.pages h1 {
+    font-size: 16pt;
+    margin: 0;
+    padding-top: 10px;
+}
+.pages p.description {
+    margin-top: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #aaa;
+    font-style: italic;
+    font-size: 12pt;
+    font-weight: 100;
+}
+.pages span.pubdate {
+    float: right;
+}
+
 blockquote {
     font-family: "Old Standard TT";
-    font-style: italic;
     font-size: 100%;
-
 }
